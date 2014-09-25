@@ -18,4 +18,5 @@ urlpatterns =patterns('',
 		
 	url(r'^(?P<story_id>\d+)/comm/$', views.comm, name='comm'),
 	url(r'^(?P<story_id>\d+)/back/$', views.back, name='back'),
+	url(r'^newstory/$', views.newstory, name='newstory'),
 )

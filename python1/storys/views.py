@@ -19,17 +19,27 @@ def detail(request, story_id):
     
 def comm(request, story_id):
     s=get_object_or_404(Story, pk=story_id)
-    try:
+    if request.POST['comment']:
     	s.comment_set.create(Comment_text=request.POST['comment'])
-    except(KeyError, Comment.DoesNotExist):
     	return render(request,'storys/detail.html',{
     	'story':s,
-    	'error_message':"Please write somthing and try again.",
     	})
     else:
     	return render(request,'storys/detail.html',{
     	'story':s,
+    	'error_message':"Please write somthing and try again.",
     	})
+    	
     	
 def back(request,story_id):
 	return HttpResponseRedirect(reverse('index'))
+	
+def newstory(request):
+	if request.POST['title'] and request.POST['content']:
+		p=Story(title=request.POST['title'], content=request.POST['content'])
+		p.save()
+		return HttpResponseRedirect(reverse('index'))
+	else:
+		return render(request,'storys/index.html',{
+		'story_list': Story.objects.all(),
+    	'error_message':"Please write somthing and try again.",})	

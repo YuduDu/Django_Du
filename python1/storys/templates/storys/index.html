@@ -1,3 +1,6 @@
+{% load staticfiles %}
+
+<link style="text/css" rel="stylesheet" href="{% static 'storys/stylesheet.css'%}"/>
 <head>
 	<title>Shortest Story</title>
 </head>
@@ -14,4 +17,13 @@
 {% else %}
     <p>No story yet.</p>
 {% endif %}
+
+<h3>Want to upload a new story?</h3>
+{%if error_message %}<p style="color: red"><strong>{{error_message}}</strong></p>{% endif %}
+<form action="{% url 'newstory' %}" method="post">
+	{% csrf_token %}
+	Title:<input type="text" name="title"/><br />
+	Content:<input type="text" name="content"/><br />
+	<input type="submit" value="submit"/>
+</form>
 </body>
