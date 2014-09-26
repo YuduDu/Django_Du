@@ -1,11 +1,31 @@
+body{
+	background: white url("images/1369025_003240152000_2.png") no-repeat center;
+	background-size:cover;
+
+}
 h1 {
 	margin: auto;
 	text-align: center;
-	font-family:cursive;
+	text-decoration: underline;
+	font-family:Courier;
 	font-size:3em;
 }
+#subtitle{
+	text-align:center;
+	font-family:cursive;
+}
 
-p {
+.option{
+	display:inline-block;
+	margin:auto;
+	margin:40px 30px 20px 30px;
+	background-color:#FAF0C6;
+	min-width:10em;
+	max-height:2em;
+	padding:5px 10px 15px 10px;
+	border-radius:100px;
+	border: 1px solid #698197;
+	text-align:center;
 }
 
 h3{
@@ -19,14 +39,14 @@ form {
 }
 
 #storylist {
-	font-size:2em;
+	font-size:1.5em;
 	font-family:Fantasy,cursive;
 	text-decoration:none;
 	color:black;
 }
 
 .form{
-	font-size:1.5em;
+	font-size:2em;
 	font-family:Tw Cen MT;
 }
 
@@ -37,10 +57,9 @@ form {
 
 .button{
 	margin:auto;
-	background-color:gray;
+	background-color:#7B93A8;
 	font-family:Tw Cen MT;
-	font-size:1em;
-	
+	font-size:1em;	
 }
 
 .textfield{
@@ -53,7 +72,8 @@ form {
 	font-family:Tw Cen MT;
 	font-size:1.5em;
 	border:none;
-	background-color:white;
+	border-radius: 20px;
+	background-color:#E2E4C9;
 }
 #back:hover{
 	font-weight:bold;

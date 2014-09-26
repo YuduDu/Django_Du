@@ -4,19 +4,21 @@
 	<title>Shortest Story</title>
 </head>
 <body>
-<h1>Check these shortest story in 
-	the world you never read!!</h1>
-
+	
+	<div id="head">
+		<h1>SHORTEST STORY EVER</h1>
+		<h2 id="subtitle">Check these shortest story in the world you never read!!</h2>
+	</div>
+	<div>
 {% if story_list %}
-    <ul>
     {% for s in story_list %}
-        <li><a id="storylist" href="{% url 'detail' s.id%}">{{ s.title }}</a></li>
+        <div class="option"><a id="storylist" href="{% url 'detail' s.id%}">{{ s.title }}</a></div>
     {% endfor %}
-    </ul>
-{% else %}
-    <p>No story yet.</p>
-{% endif %}
 
+{% else %}
+    <p style="font-size:2em"><strong>No Story Yet. ~(TwT)~</strong></p></div>
+{% endif %}
+    </div>
 <h3 class="form">Want to upload a new story?</h3>
 {%if error_message %}<p style="color: red"><strong>{{error_message}}</strong></p>{% endif %}
 <form class="form" action="{% url 'newstory' %}" method="post">

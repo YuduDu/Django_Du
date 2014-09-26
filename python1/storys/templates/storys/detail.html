@@ -23,12 +23,12 @@
 			<ol>
 				{% for c in story.comment_set.all %}
 			
-					<li style="font-size:1.2em; color:gray">{{c.Comment_text}}</li>
+					<li style="font-size:1.2em; color:#1F2965">{{c.Comment_text}}</li>
 			
 				{% endfor %}
 			</ol>
 		{% else %}
-			<p style="color: blue; font-size:20px"><em> ~~T^T~~ No Comment Yet.</em></p>
+			<p style="color: blue; font-size:1.5em"> ~~q(T^T)p~~ No Comment Yet.</p>
 		{% endif %}
 		
 	
