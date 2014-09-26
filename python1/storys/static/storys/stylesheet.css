@@ -1,19 +1,60 @@
 h1 {
 	margin: auto;
 	text-align: center;
+	font-family:cursive;
+	font-size:3em;
 }
 
-li{
-	margin: auto;
-}
 p {
 }
 
 h3{
 	margin: auto;
+	font-family:Tw Cen MT;
 }
 
 form {
 	margin: auto;
 
+}
+
+#storylist {
+	font-size:2em;
+	font-family:Fantasy,cursive;
+	text-decoration:none;
+	color:black;
+}
+
+.form{
+	font-size:1.5em;
+	font-family:Tw Cen MT;
+}
+
+#storylist:hover{
+	color: blue;
+	font-weight:bold;
+}
+
+.button{
+	margin:auto;
+	background-color:gray;
+	font-family:Tw Cen MT;
+	font-size:1em;
+	
+}
+
+.textfield{
+	font-family:Tw Cen MT;
+	height:30px;
+	width:800px;
+}
+
+#back{
+	font-family:Tw Cen MT;
+	font-size:1.5em;
+	border:none;
+	background-color:white;
+}
+#back:hover{
+	font-weight:bold;
 }
